@@ -1,0 +1,73 @@
+:root {
+    --accent: #001447;
+    --white: #ffffff;
+    --green: #80D3A1;
+    --yellow: #FFB833;
+}
+.grid-container {
+    display: grid;
+}
+
+/* amr styles */
+body {
+    font-family: circular;
+    font-weight: 400;
+}
+.moe-navbar {
+    background-color: var(--accent);
+    color: var(--white);
+}
+.moe-navbar .navbar-nav .nav-link {
+    color: var(--white);
+}
+.moe-navbar .border-bottom {
+    border-bottom-color: var(--green) !important;
+}
+.moe-navbar .btn-primary {
+    background-color: var(--yellow);
+    color: var(--accent);
+}
+.mobile-cta {
+    background-color: var(--yellow);
+    color: var(--accent);
+    height: 62px;
+    font-weight: 500;
+}
+@media only screen and (max-width: 991px) {
+    .moe-navbar .navbar-toggler {
+        position: relative;
+        right: 80px;
+    }
+    .moe-navbar .navbar-brand img {
+        height: 24px;
+    }
+}
+
+@font-face {
+    font-family: "circular";
+    src: url(./fonts/CircularXXWeb-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "circular";
+    src: url(./fonts/CircularXXWeb-Regular.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "circular";
+    src: url(./fonts/CircularXXWeb-Medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "circular";
+    src: url(./fonts/CircularXXWeb-Medium.woff2) format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
