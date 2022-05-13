@@ -30,58 +30,35 @@ body {
     height: 62px;
     font-weight: 500;
 }
-
 .moe-accordian-container .accordion-button {
     box-shadow: none;
 }
+.moe-accordian-container .accordion-button::after {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSI2cHgiIHZpZXdCb3g9IjAgMCAxMCA2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPmNoZXZyb24tZG93bjwvdGl0bGU+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEzLjAwMDAwMCwgLTE2LjAwMDAwMCkiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjQiPgogICAgICAgICAgICA8ZyBpZD0iY2hldnJvbi1kb3duIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNC4wMDAwMDAsIDE3LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBvbHlsaW5lIGlkPSJQYXRoIiBwb2ludHM9IjAgMCA0IDQgOCAwIj48L3BvbHlsaW5lPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
+    background-position: center;
+    background-size: 14px;
+
+}
 .moe-accordian-container .accordion-button.border-bottom,
+.moe-accordian-container .list-group.border-bottom,
 .moe-accordian-container .accordion-button.border-top {
     border-color: rgba(255,255,255,0.2) !important;
 }
-
-/* footer styles */
-
 .bg-shape {
     position: absolute;
     inset: 0;
     z-index: -1;
     background: rgb(0,35,124);
-    background: radial-gradient(7302px 3395px at bottom, rgba(0,35,124,1) calc(25% + 0px), rgba(255,255,255,1) calc(25% + 6px) )
+    background: radial-gradient(5180px 3880px at bottom, rgba(0,35,124,1) calc(25% + 0px), rgba(255,255,255,1) calc(25% + 2.5px) )
 }
-
 .footer {
     position: relative;
-    /* background-color: rgba(0,35,124,1); */
     color: #ffffff;
-    /* padding: 70px 0; */
-    padding-top: 150px;
-    padding-bottom: 70px;
+    padding-top: 200px;
+    padding-bottom: 113px;
     position: relative;
     z-index: 999;
 }
-/* .shape-bg {
-    position: absolute;
-    height: 700px;
-    background-color:rgba(0,35,124,1);
-    top: -10%;
-    left: -450px;
-    right: -450px;
-    border-radius: 50%;
-    z-index: -1;
-} */
-/* .footer::before {
-    content: ' ';
-    display: block;
-    height: 700px;
-    background-color:rgba(0,35,124,1);
-    position: absolute;
-    top: -10%;
-    left: -450px;
-    right: -450px;
-    border-radius: 50%;
-    z-index: -1;
-
-} */
 .footer .container a {
     text-decoration: underline;
     cursor: pointer;
@@ -116,13 +93,9 @@ body {
 }
 .newsletter-container button {
     border: none;
-    margin: 17px 0 62px 0;
+    margin: 20px 0 62px 0;
     background-color: transparent;
     color: #fff;
-    padding: 0;
-}
-.newsletter-container button img {
-    margin-left: 8px;
 }
 .form-check-label {
     font-size: 12px;
@@ -134,7 +107,6 @@ body {
 }
 .social-container img {
     margin-left: 22px;
-    /* margin-bottom: 15px; */
     height: 22px;
 }
 .footer h6 {
@@ -150,14 +122,14 @@ body {
 .footer-bottom-container {
     display: flex;
     flex-direction: column;
-    min-height: 120px;
+    min-height: 140px;
     height: 100%;
     justify-content: space-between;
     align-items: flex-start;
 }
 .footer-logo {
     height: 32px;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 .excellence-img {
     height: 40px;
@@ -192,9 +164,8 @@ body {
         font-size: 18px;
     }
     .bg-shape {
-        background: radial-gradient(7302px 4200px at bottom, rgba(0,35,124,1) calc(25% + 0px), rgba(255,255,255,1) calc(25% + 6px) )
+        background: radial-gradient(5502px 4360px at bottom, rgba(0,35,124,1) calc(25% + 0px), rgba(255,255,255,1) calc(25% + 1.5px) )
     }
-    
 }
 @media only screen and (max-width: 575.98px) {
     .newsletter-container {
@@ -207,8 +178,14 @@ body {
     .bg-shape {
         display: none;
     }
+    .footer h4 {
+        font-size: 16px;
+    }
+    .footer .newsletter-description {
+        font-size: 14px;
+        font-weight: 400;
+    }
 }
-
 @font-face {
     font-family: "circular";
     src: url(./fonts/CircularXXWeb-Regular.woff) format("woff");
