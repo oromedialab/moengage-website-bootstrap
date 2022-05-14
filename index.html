@@ -41,9 +41,7 @@
                         <div class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                             aria-expanded="false" aria-label="Toggle navigation">
-                            <!-- <span class="navbar-toggler-icon"></span> -->
-                            <!-- <img src="./images/hamburger.svg" alt="menu" /> -->
-                            <div class="hamburger" id="hamburger-9">
+                            <div class="hamburger" id="hamburger">
                                 <span class="line"></span>
                                 <span class="line"></span>
                                 <span class="line"></span>
@@ -321,8 +319,11 @@
         var navBar = document.querySelector('.moe-navbar');
         var demoCta = document.querySelector('.demo-cta');
         var navCTA = document.querySelector('.mobile-cta');
-        var html = document.querySelector('html')
-        var hasDir = html.hasAttribute('dir')
+        var html = document.querySelector('html');
+        var hasDir = html.hasAttribute('dir');
+        var hamburger = document.querySelector('.hamburger');
+
+
 
         window.addEventListener('scroll', function (e) {
             
@@ -345,6 +346,9 @@
             } else {
                 html.setAttribute('dir', 'rtl')
             }
+        });
+        hamburger.addEventListener('click', function(e) {
+            hamburger.classList.toggle('is-active')
         });
     </script>
 

@@ -89,19 +89,23 @@ body {
 .hamburger:hover {
     cursor: pointer;
 }
-#hamburger-9 {
+#hamburger {
     position: relative;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
-#hamburger-9.is-active {
+#hamburger.is-active {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
+    transition: all ease .3s;
+    position: relative;
+    /* right: -5px;
+    top: 3px; */
 }
-#hamburger-9:before {
+#hamburger:before {
     content: "";
     position: absolute;
     -webkit-box-sizing: border-box;
@@ -117,26 +121,27 @@ body {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
-#hamburger-9.is-active:before {
+/* #hamburger.is-active:before {
     border: 5px solid #ecf0f1;
+} */
+#hamburger.is-active .line {
+    width: 25px;
+    margin: 0;
 }
-#hamburger-9.is-active .line {
-    width: 35px;
-}
-#hamburger-9.is-active .line:nth-child(2) {
+#hamburger.is-active .line:nth-child(2) {
     opacity: 0;
 }
-#hamburger-9.is-active .line:nth-child(1) {
-    -webkit-transform: translateY(13px);
-    -ms-transform: translateY(13px);
-    -o-transform: translateY(13px);
-    transform: translateY(13px);
+#hamburger.is-active .line:nth-child(1) {
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    -o-transform: translateY(3px);
+    transform: translateY(3px);
 }
-#hamburger-9.is-active .line:nth-child(3) {
-    -webkit-transform: translateY(-13px) rotate(90deg);
-    -ms-transform: translateY(-13px) rotate(90deg);
-    -o-transform: translateY(-13px) rotate(90deg);
-    transform: translateY(-13px) rotate(90deg);
+#hamburger.is-active .line:nth-child(3) {
+    -webkit-transform: translateY(-1px) rotate(90deg);
+    -ms-transform: translateY(-1px) rotate(90deg);
+    -o-transform: translateY(-1px) rotate(90deg);
+    transform: translateY(-1px) rotate(90deg);
 }
 /* End of Hamburger */
 .mobile-cta {
@@ -304,6 +309,9 @@ body {
 @media only screen and (max-width: 991.98px) {
     .moe-navbar .navbar-brand img {
         height: 24px;
+    }
+    .moe-navbar {
+        min-height: var(--mobile-nav-height);
     }
 
     .moe-navbar .navbar-collapse {
