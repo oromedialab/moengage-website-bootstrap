@@ -5,6 +5,7 @@
     --off-white: #d9dfed;
     --white20: rgba(255, 255, 255, 0.2);
     --green: #80D3A1;
+    --green2: #3BB9C6;
     --yellow: #FFB833;
     --desktop-nav-height: 8.563rem;
     --mobile-nav-height: 3.875rem;
@@ -40,6 +41,16 @@ body {
 .moe-navbar.is-light .logo-dark {
     opacity: 1;
 }
+.moe-navbar .nav-top-col li .nav-link {
+    padding: 0.5rem 1rem;
+}
+.moe-navbar .nav-top-col li:last-child .nav-link{
+    padding-right: 0;
+}
+html[dir="rtl"] .moe-navbar .nav-top-col li:last-child .nav-link{
+    padding-right: 1rem;
+    padding-left: 0;
+}
 .moe-navbar .navbar-nav .nav-link {
     color: var(--white);
 }
@@ -57,6 +68,7 @@ body {
 .moe-navbar .btn-primary {
     background-color: var(--yellow);
     color: var(--accent);
+    margin-inline-start: 1rem;
 }
 .navbar-brand {
     position: relative;
@@ -105,7 +117,7 @@ body {
     /* right: -5px;
     top: 3px; */
 }
-#hamburger:before {
+/* #hamburger:before {
     content: "";
     position: absolute;
     -webkit-box-sizing: border-box;
@@ -120,7 +132,7 @@ body {
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-}
+} */
 /* #hamburger.is-active:before {
     border: 5px solid #ecf0f1;
 } */
@@ -151,7 +163,6 @@ body {
     font-weight: 500;
     right: 0;
 }
-
 .moe-accordian-container .accordion-button {
     box-shadow: none;
 }
@@ -160,15 +171,38 @@ body {
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTBweCIgaGVpZ2h0PSI2cHgiIHZpZXdCb3g9IjAgMCAxMCA2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPmNoZXZyb24tZG93bjwvdGl0bGU+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEzLjAwMDAwMCwgLTE2LjAwMDAwMCkiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjQiPgogICAgICAgICAgICA8ZyBpZD0iY2hldnJvbi1kb3duIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNC4wMDAwMDAsIDE3LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBvbHlsaW5lIGlkPSJQYXRoIiBwb2ludHM9IjAgMCA0IDQgOCAwIj48L3BvbHlsaW5lPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
     background-position: center;
     background-size: 14px;
-
 }
 
-.moe-accordian-container .accordion-button.border-bottom,
 .moe-accordian-container .list-group.border-bottom,
 .moe-accordian-container .accordion-button.border-top {
     border-color: rgba(255, 255, 255, 0.2) !important;
 }
-
+.moe-accordian-container .accordion-button.collapsed {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.moe-accordian-container .accordion-body {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.moe-accordian-container .accordion-body ul li a {
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+}
+.moe-accordian-container .accordion-body ul li a::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    background-color: var(--green2);
+    bottom: -4px;
+    transition: all ease .3s;
+}
+.moe-accordian-container .accordion-body ul li:hover a::before {
+    width: 100%;
+}
 .bg-shape {
     position: absolute;
     inset: 0;
@@ -186,15 +220,17 @@ body {
     z-index: 999;
 }
 
-.footer .container a {
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer a:hover {
     text-decoration: underline;
-    cursor: pointer;
 }
 
 .footer span {
     font-size: 12px;
 }
-
 .footer h4 {
     font-size: 30px;
     font-weight: 500;
@@ -220,21 +256,45 @@ body {
 .form-label {
     margin-bottom: 4px;
 }
-
+button:focus {
+    box-shadow: none !important;
+}
 .newsletter-container {
     max-width: 345px;
     padding-bottom: 110px;
 }
-
-.newsletter-container button {
+.footer .form-check a:first-child {
+    margin-inline-end: 5px;
+}
+.footer .newsletter-container a {
+    text-decoration: underline;
+    margin-inline-start: 5px;
+}
+html[dir="rtl"] .footer .newsletter-container a {
+    margin-inline-end: 5px;
+}
+.newsletter-container .newsletter-btn {
     border: none;
     margin: 20px 0 62px 0;
     background-color: transparent;
     color: #fff;
 }
-
+.newsletter-btn img {
+    margin-inline-start: 0.75rem;
+}
+.form-check {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+}
+.form-check .form-check-input {
+    float: unset;
+    margin: unset;
+    margin-inline-end: 0.5rem;
+}
 .form-check-label {
     font-size: 12px;
+    /* display: flex; */
 }
 
 .social-container {
@@ -276,6 +336,7 @@ body {
 
 .excellence-img {
     height: 40px;
+    margin-inline-end: 1.5rem;
 }
 
 @media (max-width: 1199.98px) {
@@ -304,8 +365,23 @@ body {
         animation-fill-mode: both;
         animation-timing-function: ease-in-out;
     }
+    .social-container img {
+        margin-left: 20px;
+    }
 }
-
+@media only screen and (min-width: 992px) {
+    .footer-policies-container span:first-child {
+        margin-inline-end: 3rem !important;
+    }
+    .excellence-img {
+        margin-inline-end: 3rem !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .footer-policies-container span:first-child {
+        margin-inline-end: 1rem;
+    }
+}
 @media only screen and (max-width: 991.98px) {
     .moe-navbar .navbar-brand img {
         height: 24px;
@@ -375,6 +451,14 @@ body {
     .footer .newsletter-description {
         font-size: 14px;
         font-weight: 400;
+    }
+    .footer .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .moe-accordian-container {
+        margin-inline-start: -16px;
+        width: 100vw;
     }
 }
 
@@ -446,4 +530,15 @@ html[dir="rtl"] .moe-navbar .navbar-toggler {
 html[dir="rtl"] .hamburger .line:last-child {
     margin-right: auto;
     margin-left: 0;
+}
+html[dir="rtl"] .newsletter-btn img {
+    transform: scaleX(-1);
+}
+html[dir="rtl"] .moe-accordian-container .accordion-button::after {
+    margin-right: auto;
+    margin-left: unset;
+}
+html[dir="rtl"] .moe-accordian-container .accordion-body ul li a::before {
+    left: auto;
+    right: 0;
 }
