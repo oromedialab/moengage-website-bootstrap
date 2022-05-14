@@ -114,28 +114,7 @@ html[dir="rtl"] .moe-navbar .nav-top-col li:last-child .nav-link{
     transform: rotate(45deg);
     transition: all ease .3s;
     position: relative;
-    /* right: -5px;
-    top: 3px; */
 }
-/* #hamburger:before {
-    content: "";
-    position: absolute;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 70px;
-    height: 70px;
-    border: 5px solid transparent;
-    top: calc(50% - 35px);
-    left: calc(50% - 35px);
-    border-radius: 100%;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-} */
-/* #hamburger.is-active:before {
-    border: 5px solid #ecf0f1;
-} */
 #hamburger.is-active .line {
     width: 25px;
     margin: 0;
@@ -344,13 +323,18 @@ html[dir="rtl"] .footer .newsletter-container a {
         position: relative;
         right: 80px;
     }
-
+    .moe-navbar .navbar-collapse .navbar-collapse-container {
+        height: calc(100vh - 63px);
+    }
+    .moe-navbar .mobile-cta {
+        min-height: 63px;
+    }
     .moe-navbar .navbar-collapse {
         background: var(--white);
         position: absolute;
         left: 0px;
         right: 0px;
-        top: var(--desktop-nav-height);
+        top: var(--mobile-nav-height);
     }
 
     .moe-navbar .navbar-collapse .navbar-nav .nav-link {
@@ -389,7 +373,9 @@ html[dir="rtl"] .footer .newsletter-container a {
     .moe-navbar {
         min-height: var(--mobile-nav-height);
     }
-
+    .moe-navbar .mobile-cta {
+        min-height: 62px;
+    }
     .moe-navbar .navbar-collapse {
         top: var(--mobile-nav-height);
     }
