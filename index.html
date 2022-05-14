@@ -14,7 +14,8 @@
 
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark py-0 moe-navbar">
+        <!-- Start of Navigation Bar -->
+        <nav class="navbar fixed-top navbar-expand-xl navbar-dark py-0 moe-navbar">
             <div class="container flex-column">
                 <div class="nav-col w-100 d-lg-flex d-none justify-content-end py-2 border-bottom">
                     <ul class="d-flex flex-row navbar-nav align-items-center">
@@ -31,7 +32,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="d-lg-flex w-100 justify-content-between py-lg-4 py-3 align-items-center">
+                <div class="d-xl-flex w-100 justify-content-between py-lg-4 py-3 align-items-center">
                     <div class="d-flex align-items-center justify-content-between">
                         <a class="navbar-brand p-0">
                             <img src="./images/moengage-logo-white.svg" alt="logo" />
@@ -43,41 +44,43 @@
                             <img src="./images/hamburger.svg" alt="menu" />
                         </div>
                         <div
-                            class="d-lg-none p-3 position-absolute end-0 d-flex align-items-center justify-content-center px-3 mobile-cta">
+                            class="d-xl-none p-3 position-absolute end-0 d-flex align-items-center justify-content-center px-3 mobile-cta">
                             Demo</div>
                     </div>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <ul class="d-lg-flex w-100 navbar-nav justify-content-end">
-                            <li class="nav-item">
-                                <a class="nav-link fw-regular px-lg-4 py-sm-3 py-lg-2 pt-4" href="#">Platform</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-regular px-lg-4 py-sm-3 py-lg-2" href="#">Solutions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-regular px-lg-4 py-sm-3 py-lg-2" href="#">Customer Success</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-regular px-lg-4 py-sm-3 py-lg-2" href="#">Resources</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-regular px-lg-4 py-sm-3 py-lg-2" href="#">Company</a>
-                            </li>
-                            <li class="nav-item d-none d-lg-flex">
-                                <button type="button"
-                                    class="btn btn-primary ms-lg-3 mt-lg-0 mt-sm-2 py-2 px-4 border-0">Request
-                                    Demo</button>
-                            </li>
-                        </ul>
+                        <div class="container navbar-collapse-container">
+                            <ul class="d-lg-flex w-100 navbar-nav justify-content-end">
+                                <li class="nav-item" style="--animation-order: 1;">
+                                    <a class="nav-link fw-regular px-lg-4 py-sm-3 py-3 py-xxl-2" href="#">Platform</a>
+                                </li>
+                                <li class="nav-item" style="--animation-order: 2;">
+                                    <a class="nav-link fw-regular px-lg-4 py-sm-3 py-3 py-xxl-2" href="#">Solutions</a>
+                                </li>
+                                <li class="nav-item" style="--animation-order: 3;">
+                                    <a class="nav-link fw-regular px-lg-4 py-sm-3 py-3 py-xxl-2" href="#">Customer Success</a>
+                                </li>
+                                <li class="nav-item" style="--animation-order: 4;">
+                                    <a class="nav-link fw-regular px-lg-4 py-sm-3 py-3 py-xxl-2" href="#">Resources</a>
+                                </li>
+                                <li class="nav-item" style="--animation-order: 5;">
+                                    <a class="nav-link fw-regular px-lg-4 py-sm-3 py-3 py-xxl-2" href="#">Company</a>
+                                </li>
+                                <li class="nav-item d-none d-xl-flex" style="--animation-order: 6;">
+                                    <button type="button"
+                                        class="btn btn-primary ms-lg-3 mt-lg-0 mt-sm-2 py-2 px-4 border-0">Request
+                                        Demo</button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </nav>
+        <!-- End of Navigation Bar -->
     </header>
 
 
-    <div style="height: 100vh; background-color: #fff;"></div>
+    <div style="height: 100vh; background-color: #f1f1f1;"></div>
 
     <footer class="footer">
         <!-- <div class="shape-bg"></div> -->
