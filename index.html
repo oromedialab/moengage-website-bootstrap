@@ -49,33 +49,40 @@
                                 <span class="line"></span>
                             </div>
                         </div>
-                        <div
-                            class="d-xl-none p-3 position-absolute end-0 d-flex align-items-center justify-content-center px-3 mobile-cta">
-                            Demo</div>
+                        <div class="d-xl-none p-3 position-absolute d-flex align-items-center justify-content-center px-3 mobile-cta"> Demo</div>
                     </div>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="container-xl px-0 navbar-collapse-container">
-                            <ul class="d-lg-flex w-100 navbar-nav justify-content-end">
+                            <ul class="d-lg-flex w-100 p-0 navbar-nav justify-content-end">
                                 <li class="nav-item" style="--animation-order: 1;">
-                                    <a class="nav-link fw-regular px-xl-4 py-sm-3 py-3 py-xxl-2" href="#">Platform</a>
+                                    <a class="nav-link fw-regular px-xl-4 px-3 py-sm-3 py-3 py-xl-2" href="#">Platform</a>
                                 </li>
                                 <li class="nav-item" style="--animation-order: 2;">
-                                    <a class="nav-link fw-regular px-xl-4 py-sm-3 py-3 py-xxl-2" href="#">Solutions</a>
+                                    <a class="nav-link fw-regular px-xl-4 px-3 py-sm-3 py-3 py-xl-2" href="#">Solutions</a>
                                 </li>
                                 <li class="nav-item" style="--animation-order: 3;">
-                                    <a class="nav-link fw-regular px-xl-4 py-sm-3 py-3 py-xxl-2" href="#">Customer
+                                    <a class="nav-link fw-regular px-xl-4 px-3 py-sm-3 py-3 py-xl-2" href="#">Customer
                                         Success</a>
                                 </li>
                                 <li class="nav-item" style="--animation-order: 4;">
-                                    <a class="nav-link fw-regular px-xl-4 py-sm-3 py-3 py-xxl-2" href="#">Resources</a>
+                                    <a class="nav-link fw-regular px-xl-4 px-3 py-sm-3 py-3 py-xl-2" href="#">Resources</a>
                                 </li>
                                 <li class="nav-item" style="--animation-order: 5;">
-                                    <a class="nav-link fw-regular px-xl-4 py-sm-3 py-3 py-xxl-2" href="#">Company</a>
+                                    <a class="nav-link fw-regular px-xl-4 px-3 py-sm-3 py-3 py-xl-2" href="#">Company</a>
                                 </li>
-                                <li class="nav-item d-none d-xl-flex" style="--animation-order: 6;">
-                                    <button type="button"
-                                        class="btn btn-primary ms-lg-3 mt-lg-0 mt-sm-2 py-2 px-4 border-0">Request
-                                        Demo</button>
+                                <div class="d-xl-none">
+                                    <li class="nav-item" style="--animation-order: 6;">
+                                        <a class="nav-link fw-regular px-xl-4 px-3 py-sm-3 py-3 py-xl-2" href="#">Partners</a>
+                                    </li>
+                                    <li class="nav-item" style="--animation-order: 7;">
+                                        <a class="nav-link fw-regular px-xl-4 px-3 py-sm-3 py-3 py-xl-2" href="#">Support</a>
+                                    </li>
+                                    <li class="nav-item" style="--animation-order: 8;">
+                                        <a class="nav-link fw-regular px-xl-4 px-3 py-sm-3 py-3 py-xl-2" href="#">Login</a>
+                                    </li>
+                                </div>
+                                <li class="nav-item d-none d-xl-flex" style="--animation-order: 9;">
+                                    <button type="button" class="btn btn-primary ms-lg-3 mt-lg-0 mt-sm-2 py-2 px-4 border-0 demo-cta">Request Demo</button>
                                 </li>
                             </ul>
                         </div>
@@ -312,7 +319,10 @@
         crossorigin="anonymous"></script>
     <script>
         var navBar = document.querySelector('.moe-navbar');
-        console.log(navBar)
+        var demoCta = document.querySelector('.demo-cta');
+        var navCTA = document.querySelector('.mobile-cta');
+        var html = document.querySelector('html')
+        var hasDir = html.hasAttribute('dir')
 
         window.addEventListener('scroll', function (e) {
             
@@ -320,6 +330,20 @@
                 navBar.classList.add('is-light')
             } else {
                 navBar.classList.remove('is-light')
+            }
+        });
+        navCTA.addEventListener('click', function(e) {
+            if(html.hasAttribute('dir')) {
+                html.removeAttribute('dir')
+            } else {
+                html.setAttribute('dir', 'rtl')
+            }
+        });
+        demoCta.addEventListener('click', function(e) {
+            if(html.hasAttribute('dir')) {
+                html.removeAttribute('dir')
+            } else {
+                html.setAttribute('dir', 'rtl')
             }
         });
     </script>
