@@ -317,7 +317,11 @@ html[dir="rtl"] .footer .newsletter-container a {
     height: 40px;
     margin-inline-end: 1.5rem;
 }
-
+@media (min-width: 1200px) {
+    .moe-navbar.is-light {
+        transform: translateY(-58px);
+    }
+}
 @media (max-width: 1199.98px) {
     .moe-navbar .navbar-toggler {
         position: relative;
@@ -416,18 +420,22 @@ html[dir="rtl"] .footer .newsletter-container a {
     }
 }
 
-@media only screen and (max-width: 575.98px) {
-    .newsletter-container {
-        padding-bottom: 48px;
+@media (max-width: 767.98px) {
+    .bg-shape {
+        display: none;
     }
-
     .footer {
         padding: 70px 0;
         background-color: rgba(0, 35, 124, 1);
     }
+    .newsletter-container {
+        max-width: unset;
+    }
+}
 
-    .bg-shape {
-        display: none;
+@media only screen and (max-width: 575.98px) {
+    .newsletter-container {
+        padding-bottom: 48px;
     }
 
     .footer h4 {
