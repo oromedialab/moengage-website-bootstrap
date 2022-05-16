@@ -428,6 +428,19 @@ html[dir="rtl"] .footer .newsletter-container a {
         padding: 70px 0;
         background-color: rgba(0, 35, 124, 1);
     }
+    .footer::before {
+        content: ' ';
+        z-index: -1;
+        position: absolute;
+        top: -50px;
+        left: 0;
+        right: 0;
+        display: flex;
+        height: 50%;
+        background-image: url(./images/arch.svg);
+        background-position: center top;
+        background-size: cover;
+    }
     .newsletter-container {
         max-width: unset;
     }
@@ -453,6 +466,12 @@ html[dir="rtl"] .footer .newsletter-container a {
     .moe-accordian-container {
         margin-inline-start: -16px;
         width: 100vw;
+    }
+    .footer {
+        padding: 10px 0;
+    }
+    .footer::before {
+        height: 150px;;
     }
 }
 
