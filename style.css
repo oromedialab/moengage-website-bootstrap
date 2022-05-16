@@ -468,7 +468,7 @@ html[dir="rtl"] .footer .newsletter-container a {
         width: 100vw;
     }
     .footer {
-        padding: 10px 0;
+        padding: 40px 0;
     }
     .footer::before {
         height: 150px;;
