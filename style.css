@@ -404,6 +404,9 @@ html[dir="rtl"] .footer .newsletter-container a {
     .footer .newsletter-description {
         font-size: 18px;
     }
+    .excellence-img {
+        height: 32px;
+    }
 }
 @media only screen and (min-width: 768px) {
     .footer-policies-container span:first-child {
