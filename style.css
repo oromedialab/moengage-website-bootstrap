@@ -17,7 +17,21 @@ body {
     font-weight: 400;
     overflow-x: hidden;
 }
+.form-control:focus,
+.form-control:focus-visible,
+.form-check .form-check-input {
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+.form-control {
+    border: none;
 
+}
+.ph16 {
+    padding-left: 16px;
+    padding-right: 16px;
+}
 .moe-navbar {
     background-color: var(--accent);
     color: var(--white);
@@ -270,6 +284,7 @@ html[dir="rtl"] .footer .newsletter-container a {
     float: unset;
     margin: unset;
     margin-inline-end: 0.5rem;
+    min-width: 16px;
 }
 .form-check-label {
     font-size: 12px;
@@ -356,18 +371,58 @@ html[dir="rtl"] .footer .newsletter-container a {
     .social-container img {
         margin-left: 20px;
     }
-}
-@media only screen and (min-width: 992px) {
-    .footer-policies-container span:first-child {
-        margin-inline-end: 3rem !important;
+    .footer {
+        padding-top: 100px;
     }
-    .excellence-img {
-        margin-inline-end: 3rem !important;
+    .bg-shape {
+        background: radial-gradient(6702px 4100px at bottom, rgba(0, 35, 124, 1) calc(25% + 0px), rgba(255, 255, 255, 1) calc(25% + 1.5px))
+    }
+    .newsletter-container {
+        padding-bottom: 40px;
+        max-width: 360px;
+    }
+    .footer-bottom-container {
+        height: unset;
+        min-height: unset;
+    }
+
+    .footer-bottom-container .footer-logo {
+        margin-bottom: 25px;
+        margin-top: 0;
+    }
+
+    .footer-bottom-container.second {
+        flex-direction: column-reverse;
+        height: unset;
+    }
+
+    .footer-bottom-container.second span {
+        margin-bottom: 60px;
+        margin-top: 20px;
+    }
+
+    .footer .newsletter-description {
+        font-size: 18px;
     }
 }
 @media only screen and (min-width: 768px) {
     .footer-policies-container span:first-child {
         margin-inline-end: 1rem;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .excellence-img {
+        margin-inline-end: 3rem;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .footer-policies-container span:first-child {
+        margin-inline-end: 3rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .mw-360-ipad {
+        max-width: 360px;
     }
 }
 @media only screen and (max-width: 991.98px) {
@@ -387,39 +442,13 @@ html[dir="rtl"] .footer .newsletter-container a {
     .moe-navbar .navbar-collapse .navbar-collapse-container {
         height: calc(100vh - 62px);
     }
-
-    .newsletter-container {
-        padding-bottom: 62px;
-    }
-
-    .footer-bottom-container {
-        height: unset;
-        min-height: unset;
-    }
-
-    .footer-bottom-container .footer-logo {
-        margin-bottom: 25px;
-        margin-top: 0;
-    }
-
-    .footer-bottom-container.second {
-        flex-direction: column-reverse;
-        height: unset;
-    }
-
-    .footer-bottom-container.second span {
-        margin-bottom: 62px;
-    }
-
-    .footer .newsletter-description {
-        font-size: 18px;
-    }
-
     .bg-shape {
         background: radial-gradient(5502px 4360px at bottom, rgba(0, 35, 124, 1) calc(25% + 0px), rgba(255, 255, 255, 1) calc(25% + 1.5px))
     }
+    .newsletter-container {
+        padding-bottom: 70px;
+    }
 }
-
 @media (max-width: 767.98px) {
     .bg-shape {
         display: none;
@@ -445,10 +474,18 @@ html[dir="rtl"] .footer .newsletter-container a {
         max-width: unset;
     }
 }
-
 @media only screen and (max-width: 575.98px) {
     .newsletter-container {
         padding-bottom: 48px;
+    }
+
+    .footer {
+        padding: 70px 0;
+        background-color: rgba(0, 35, 124, 1);
+    }
+
+    .bg-shape {
+        display: none;
     }
 
     .footer h4 {
@@ -475,9 +512,16 @@ html[dir="rtl"] .footer .newsletter-container a {
     }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 360px) {
     .moe-navbar .navbar-brand img {
         height: 1.3rem;
+    }
+    .form-check {
+        align-items: flex-start;
+    }
+    .form-check input {
+        position: relative;
+        top: 1px;
     }
 }
 
