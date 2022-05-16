@@ -55,8 +55,20 @@ body {
 .moe-navbar.is-light .logo-dark {
     opacity: 1;
 }
+.moe-navbar .nav-top-col li {
+    display: flex;
+    align-items: center;
+}
 .moe-navbar .nav-top-col li .nav-link {
     padding: 0.5rem 1rem;
+}
+.moe-navbar .nav-top-col li:nth-child(2)::before,
+.moe-navbar .nav-top-col li:nth-child(2)::after {
+    content: ' ';
+    display: flex;
+    width: 2px;
+    height: 12px;
+    background-color: var(--white);
 }
 .moe-navbar .nav-top-col li:last-child .nav-link{
     padding-right: 0;
@@ -274,6 +286,7 @@ html[dir="rtl"] .footer .newsletter-container a {
 }
 .newsletter-btn img {
     margin-inline-start: 0.75rem;
+    width: auto;
 }
 .form-check {
     display: flex;
@@ -300,6 +313,7 @@ html[dir="rtl"] .footer .newsletter-container a {
 .social-container img {
     margin-left: 22px;
     height: 22px;
+    width: auto;
 }
 
 .footer h6 {
@@ -326,10 +340,12 @@ html[dir="rtl"] .footer .newsletter-container a {
 .footer-logo {
     height: 32px;
     margin-top: 8px;
+    width: auto;
 }
 
 .excellence-img {
     height: 40px;
+    width: auto;
     margin-inline-end: 1.5rem;
 }
 @media (min-width: 1200px) {
@@ -431,6 +447,7 @@ html[dir="rtl"] .footer .newsletter-container a {
 @media only screen and (max-width: 991.98px) {
     .moe-navbar .navbar-brand img {
         height: 24px;
+        width: auto;
     }
     .moe-navbar {
         min-height: var(--mobile-nav-height);
