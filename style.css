@@ -278,6 +278,9 @@ button:focus {
 html[dir="rtl"] .footer .newsletter-container a {
     margin-inline-end: 5px;
 }
+html[dir="rtl"] .footer .social-container a {
+    margin: 0;
+}
 .newsletter-container .newsletter-btn {
     border: none;
     margin: 20px 0 62px 0;
@@ -311,11 +314,12 @@ html[dir="rtl"] .footer .newsletter-container a {
 }
 
 .social-container img {
-    margin-left: 22px;
+    margin-inline-start: 22px;
     height: 22px;
-    width: auto;
 }
-
+.footer .social-container a {
+    margin: 0;
+}
 .footer h6 {
     padding-bottom: 10px;
     font-weight: 500;
@@ -385,10 +389,10 @@ html[dir="rtl"] .footer .newsletter-container a {
         animation-timing-function: ease-in-out;
     }
     .social-container img {
-        margin-left: 20px;
+        margin-inline-start: 20px;
     }
     .footer {
-        padding-top: 100px;
+        padding-top: 130px;
     }
     .bg-shape {
         background: radial-gradient(6702px 4100px at bottom, rgba(0, 35, 124, 1) calc(25% + 0px), rgba(255, 255, 255, 1) calc(25% + 1.5px))
@@ -406,7 +410,6 @@ html[dir="rtl"] .footer .newsletter-container a {
         margin-bottom: 25px;
         margin-top: 0;
     }
-
     .footer-bottom-container.second {
         flex-direction: column-reverse;
         height: unset;
@@ -445,6 +448,9 @@ html[dir="rtl"] .footer .newsletter-container a {
     }
 }
 @media only screen and (max-width: 991.98px) {
+    .footer {
+        padding-top: 125px;
+    }
     .moe-navbar .navbar-brand img {
         height: 24px;
         width: auto;
@@ -463,7 +469,7 @@ html[dir="rtl"] .footer .newsletter-container a {
         height: calc(100vh - 62px);
     }
     .bg-shape {
-        background: radial-gradient(5502px 4360px at bottom, rgba(0, 35, 124, 1) calc(25% + 0px), rgba(255, 255, 255, 1) calc(25% + 1.5px))
+        background: radial-gradient(5502px 4360px at bottom, rgba(0, 35, 124, 1) calc(25% + 0px), rgba(255, 255, 255, 1) calc(25% + 2px))
     }
     .newsletter-container {
         padding-bottom: 70px;
@@ -576,10 +582,6 @@ html[dir="rtl"] .footer .newsletter-container a {
     font-style: normal;
     font-display: swap;
 }
-
-/* @keyframes list-animation {
-    from { opacity: 0; left: 100px; }
-} */
 @keyframes list-animation {
     0% {
         opacity: 0;
