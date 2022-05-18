@@ -5,6 +5,7 @@
     --off-white: #d9dfed;
     --white20: rgba(255, 255, 255, 0.2);
     --green: #80D3A1;
+    --primary-teal: #06A6B7;
     --green2: #3BB9C6;
     --yellow: #FFB833;
     --desktop-nav-height: 8.563rem;
@@ -39,7 +40,6 @@ body {
 }
 .moe-navbar.is-light {
     background-color: var(--white);
-    color: red;
     -webkit-box-shadow: 0 2px 60px 0 rgba(0,0,0,0.15);
     box-shadow: 0 2px 60px 0 rgba(0,0,0,0.15);
 }
@@ -49,8 +49,8 @@ body {
 .moe-navbar.is-light .navbar-nav .nav-link {
     color: var(--accent);
 }
-.moe-navbar.is-light .logo-light {
-    opacity: 0;
+.moe-navbar.is-light .navbar-brand img {
+    filter: unset;
 }
 .moe-navbar.is-light .logo-dark {
     opacity: 1;
@@ -102,11 +102,10 @@ html[dir="rtl"] .moe-navbar .nav-top-col li:last-child .nav-link{
     user-select: none;
     margin: 0;
 }
-.logo-light {
-    opacity: 1;
-} 
-.logo-dark {
-    opacity: 0;
+.navbar-brand img {
+    filter: brightness(0) invert(1);
+    height: 30px;
+    width: auto;
 }
 /* Start of Hamburger */
 .hamburger .line {
@@ -446,6 +445,10 @@ html[dir="rtl"] .footer .social-container a {
     .mw-360-ipad {
         max-width: 360px;
     }
+    .moe-navbar .mobile-cta {
+        background-color: var(--primary-teal);
+        color: var(--white);
+    }
 }
 @media only screen and (max-width: 991.98px) {
     .footer {
@@ -597,7 +600,6 @@ html[dir="rtl"] .footer .social-container a {
         opacity: 1;
     }
 }
-
 html[dir="rtl"] .mobile-cta {
     right: auto;
     left: 0;
