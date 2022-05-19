@@ -556,6 +556,7 @@ html[dir="rtl"] .footer .footer-col-left a {
     .nav-accordion .accordion-item .accordion-button {
         padding: 2rem 1.5rem;
         position: relative;
+        font-size: 0.938rem;
     }
     .nav-accordion .accordion-body {
         padding: 2rem 1.5rem;
@@ -586,10 +587,13 @@ html[dir="rtl"] .footer .footer-col-left a {
     .nav-accordion .accordion-button .btn-label::after {
         width: 100%;
     }
+    .mobile-nav-footer {
+        padding: 2.625rem 2.125rem;
+    }
     .mobile-nav-footer a {
         color: var(--moengage-blue);
         text-decoration: none;
-        margin-inline-start: 0.5rem;
+        /* margin-inline-start: 0.5rem; */
     }
     .mobile-nav-footer a img {
         background-color: var(--accent);
@@ -598,7 +602,7 @@ html[dir="rtl"] .footer .footer-col-left a {
     }
     .moe-navbar .mobile-nav .btn-primary {
         margin: 0;
-        margin-inline-end: 0.5rem;
+        /* margin-inline-end: 0.5rem; */
         color: var(--moengage-blue);
     }
     .nav-accordion .accordion-item {
