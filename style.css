@@ -1,11 +1,13 @@
 :root {
     --accent: #001447;
+    --moengage-blue: #00237C;
     --white: #ffffff;
     --gray: #6b7c93;
-    --off-white: #d9dfed;
+    --off-white: #CFDBE1;
     --white20: rgba(255, 255, 255, 0.2);
     --green: #80D3A1;
     --primary-teal: #06A6B7;
+    --primary-dark-teal: #046873;
     --green2: #3BB9C6;
     --yellow: #FFB833;
     --desktop-nav-height: 8.563rem;
@@ -426,7 +428,6 @@ html[dir="rtl"] .footer .footer-col-left a {
 .footer.variant-default {
     width: unset;
 }
-
 @media (min-width: 1200px) {
     .moe-navbar.is-compact {
         transform: translateY(-58px);
@@ -439,6 +440,7 @@ html[dir="rtl"] .footer .footer-col-left a {
     }
     .moe-navbar .navbar-collapse .navbar-collapse-container {
         height: calc(100vh - 63px);
+        overflow-y: auto;
     }
     .moe-navbar .mobile-cta {
         min-height: 63px;
@@ -475,7 +477,6 @@ html[dir="rtl"] .footer .footer-col-left a {
     .footer-col-left {
         padding-bottom: 40px;
         max-width: 360px;
-        /* height: 413px; */
     }
     .footer-bottom-container {
         height: unset;
@@ -532,6 +533,82 @@ html[dir="rtl"] .footer .footer-col-left a {
     .footer-description {
         margin-top: 40px;
     }
+    .desktop-nav {
+        display: none;
+    }
+    .mobile-nav {
+        border-top: 1px solid var(--off-white);
+        height: 100%;
+    }
+    .mobile-nav li a {
+        padding: 2rem 1.5rem !important;
+    }
+    .nav-accordion .accordion-item .accordion-button.collapsed {
+        color: var(--moengage-blue);
+    }
+    .nav-accordion .accordion-item .accordion-button {
+        background-color: var(--white);
+        color: var(--moengage-blue);
+    }
+    .accordion-button:not(.collapsed) {
+        box-shadow: none;
+    }
+    .nav-accordion .accordion-item .accordion-button {
+        padding: 2rem 1.5rem;
+        position: relative;
+    }
+    .nav-accordion .accordion-body {
+        padding: 2rem 1.5rem;
+        padding-top: 0;
+    }
+    .nav-accordion .accordion-item .accordion-button::after {
+        background-size: 0.75rem;
+        background-position: center;
+    }
+    .nav-accordion .btn-label {
+        position: relative;
+    }
+    .nav-accordion .btn-label::after {
+        content: ' ';
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: var(--primary-dark-teal);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        transition: all cubic-bezier(.77,0,.18,1) .3s;
+    }
+    .nav-accordion .accordion-button.collapsed .btn-label::after {
+        width: 0%;
+    }
+    .nav-accordion .accordion-button .btn-label::after {
+        width: 100%;
+    }
+    .mobile-nav-footer a {
+        color: var(--moengage-blue);
+        text-decoration: none;
+        margin-inline-start: 0.5rem;
+    }
+    .mobile-nav-footer a img {
+        background-color: var(--accent);
+        border-radius: 100px;
+        margin-inline-start: 0.375rem;
+    }
+    .moe-navbar .mobile-nav .btn-primary {
+        margin: 0;
+        margin-inline-end: 0.5rem;
+        color: var(--moengage-blue);
+    }
+    .nav-accordion .accordion-item {
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid var(--off-white);
+    }
+    .nav-accordion .accordion-body {
+        color: var(--accent);
+    }
 }
 @media only screen and (min-width: 768px) {
     .footer-policies-container span:first-child {
@@ -541,6 +618,12 @@ html[dir="rtl"] .footer .footer-col-left a {
 @media only screen and (min-width: 1200px) {
     .footer-policies-container span:first-child {
         margin-inline-end: 3rem;
+    }
+    .mobile-nav {
+        display: none;
+    }
+    .desktop-nav {
+        display: flex;
     }
 }
 @media (min-width: 768px) and (max-width: 1199.98px) {
@@ -661,6 +744,12 @@ html[dir="rtl"] .footer .footer-col-left a {
     .form-check input {
         position: relative;
         top: 1px;
+    }
+    .mobile-nav-footer a {
+        margin-inline-start: 0rem;
+    }
+    .moe-navbar .mobile-nav .btn-primary {
+        margin-inline-end: 0rem;
     }
 }
 
